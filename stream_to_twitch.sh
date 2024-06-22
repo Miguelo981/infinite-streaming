@@ -21,8 +21,8 @@ openbox &
 x11vnc -display :99 -noipv6 -forever &
 
 # Run Chromium in full screen mode
-chromium-browser --no-sandbox --disable-gpu --disable-software-rasterizer --disable-dev-shm-usage \
---window-size=1920x1080 --start-fullscreen 'https://saaslidator.com/' &
+google-chrome --no-sandbox --disable-gpu --disable-software-rasterizer --disable-dev-shm-usage --disable-fre --no-default-browser-check --no-first-run --test-type \
+--window-size=1920x1080 --start-fullscreen "${YOUR_WEBSITE_URL}" &
 
 # Wait a moment to make sure the page has loaded
 sleep 5
