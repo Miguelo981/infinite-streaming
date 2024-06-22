@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  infinite-stream:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+    - .env
+    volumes:
+    - ./stream_to_twitch.sh:/home/stream_to_twitch.sh
