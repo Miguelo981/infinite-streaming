@@ -1,6 +1,6 @@
-# Infinite Twitch Stream
+# Infinite Twitch, YouTube or Kick Stream
 
-This repository provides a solution to create infinite streams on Twitch using a Docker script. Special thanks to [EsteveSegura](https://github.com/EsteveSegura) for the inspiration from their [publication](https://x.com/girlazote/status/1803181481059340443).
+This repository provides a solution to create infinite streams on Twitch, YouTube or Kick using a Docker script. Special thanks to [EsteveSegura](https://github.com/EsteveSegura) for the inspiration from their [publication](https://x.com/girlazote/status/1803181481059340443).
 
 ## Table of Contents
 
@@ -23,8 +23,8 @@ This repository provides a solution to create infinite streams on Twitch using a
 1. **Clone the Repository**
 
     ```bash
-    git clone https://github.com/your-username/infinite-twitch-stream.git
-    cd infinite-twitch-stream
+    git clone https://github.com/your-username/infinite-streaming.git
+    cd infinite-streaming
     ```
 
 2. **Create the `.env` File**
