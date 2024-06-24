@@ -33,6 +33,9 @@ This repository provides a solution to create infinite streams on Twitch using a
 
     ```env
     TWITCH_API_KEY=your_twitch_api_key
+    YOUTUBE_API_KEY=your_youtube_api_key
+    KICK_STREAM_URL=your_kick_stream_url
+    KICK_STREAM_KEY=your_kick_stream_key
     YOUR_WEBSITE_URL=your_website_url
     ```
 
@@ -45,7 +48,7 @@ This repository provides a solution to create infinite streams on Twitch using a
 4. **Run the Docker Container**
 
     ```bash
-    docker run --env-file .env -v $(pwd)/stream_to_twitch.sh:/home/stream_to_twitch.sh infinite-stream
+    docker run --env-file .env -v $(pwd)/start_stream.sh:/home/start_stream.sh infinite-stream
     ```
 
 ### Docker Compose
@@ -63,6 +66,9 @@ This repository provides a solution to create infinite streams on Twitch using a
 
     ```env
     TWITCH_API_KEY=your_twitch_api_key
+    YOUTUBE_API_KEY=your_youtube_api_key
+    KICK_STREAM_URL=your_kick_stream_url
+    KICK_STREAM_KEY=your_kick_stream_key
     YOUR_WEBSITE_URL=your_website_url
     ```
 
@@ -78,6 +84,9 @@ Create a `.env` file in the root directory of the project with the following var
 
 ```env
 TWITCH_API_KEY=your_twitch_api_key
+YOUTUBE_API_KEY=your_youtube_api_key
+KICK_STREAM_URL=your_kick_stream_url
+KICK_STREAM_KEY=your_kick_stream_key
 YOUR_WEBSITE_URL=your_website_url
 ```
 
