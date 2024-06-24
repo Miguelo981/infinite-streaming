@@ -1,5 +1,24 @@
 #!/bin/bash
 
+STREAM_URL=""
+
+if [ -n "${TWITCH_API_KEY}" ]; then
+    echo "Configuring stream for Twitch"
+    STREAM_URL="rtmp://live-lax.twitch.tv/app/${TWITCH_API_KEY}"
+fi
+
+# Configure stream for YouTube if an API key is provided
+if [ -n "${YOUTUBE_API_KEY}" ]; then
+    echo "Configuring stream for YouTube"
+    STREAM_URL="rtmp://a.rtmp.youtube.com/live2/${YOUTUBE_API_KEY}"
+fi
+
+# Configure stream for Kick if both URL and key are provided
+if [ -n "${KICK_STREAM_URL}" ] && [ -n "${KICK_STREAM_KEY}" ]; then
+    echo "Configuring stream for Kick"
+    STREAM_URL="${KICK_STREAM_URL}:443/app/${KICK_STREAM_KEY}"
+fi
+
 # Stop any running Xvfb server
 killall Xvfb
 
@@ -30,4 +49,4 @@ sleep 5
 # Start FFmpeg to capture the virtual screen and stream to Twitch
 ffmpeg -f x11grab -s 1920x1080 -framerate 30 -i :99 \
 -vcodec libx264 -preset veryfast -maxrate 2000k -bufsize 4000k \
--pix_fmt yuv420p -g 60 -f flv rtmp://live.twitch.tv/app/${TWITCH_API_KEY}
+-pix_fmt yuv420p -g 60 -f flv ${STREAM_URL}
