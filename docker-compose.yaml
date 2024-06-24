@@ -8,4 +8,4 @@ services:
     env_file:
     - .env
     volumes:
-    - ./stream_to_twitch.sh:/home/stream_to_twitch.sh
+    - ./start_stream.sh:/home/start_stream.sh
