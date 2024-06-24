@@ -12,4 +12,4 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-ENTRYPOINT ["sh", "/home/stream_to_twitch.sh"]
+ENTRYPOINT ["sh", "/home/start_stream.sh"]
